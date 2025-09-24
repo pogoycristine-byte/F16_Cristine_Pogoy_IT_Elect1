@@ -1,22 +1,22 @@
-import ColorChangerApp from './ColorChangerApp';
-import CounterApp from './CounterApp'
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import ChatScreen from './ChatScreen'; 
+import CommentSection from './CommentSection';
 
-export default function App() {
-   return (
-     <View style={styles.container}>
-       <ColorChangerApp/>
-       <CounterApp/>
-     </View>
-   );
-}
+const App = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <ChatScreen />
+      <CommentSection />
+    </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // Add any global styles here if needed
   },
 });
+
+export default App;
